@@ -1,0 +1,379 @@
+.banner
+{
+    height: 300px;
+    width: 100%;
+    opacity: 80%;
+}
+
+.banner .devAndDev
+{
+    float: right;
+    width: 500px;
+    padding: 40px;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.banner .devAndDev
+{
+    font-family: NunitoSans-Regular;
+}
+
+.banner .devAndDev h2
+{
+    padding-bottom: 10px;
+}
+
+.contactUs
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: aqua;
+    
+    color: white;
+    font-size: 15px;
+    
+    font-family: MontserratMedium;
+}
+
+.contactUs:hover
+{
+    cursor: pointer;
+}
+/*---------------------------------------------------------------------------*/
+.aboutUs
+{
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+}
+
+.aboutUs .text
+{
+    padding: 100px;
+    width: 35%;
+    opacity: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: NunitoSans-Regular;
+}
+
+.aboutUs h2
+{
+    margin-bottom: 20px;
+}
+
+.aboutUs img
+{
+    margin-top: 70px;
+}
+/*---------------------------------------------------------------------------*/
+.proSkills
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    float: left;
+}
+
+.proSkills .bars
+{
+    width: 500px;
+    height: 350px;
+}
+.proSkills .bars h2
+{
+    
+    margin-bottom: 40px;
+}
+
+.proSkills .bars span
+{
+    margin-top: 60px;
+}
+/*--ProgressBar--*/
+.pb
+{
+    width: 90%;
+    background-color: grey;
+    opacity: 80%;
+}
+
+.pb1
+{  
+    height: 5px;
+    width: 75%;
+    background-color:aqua;
+}
+
+.pb2
+{   
+    height: 5px;
+    width: 90%;
+    background-color:aqua;
+}
+
+.pb3
+{
+    height: 5px;
+    width: 65%;
+    background-color: aqua;
+}
+/*--Slider--*/
+.sliderContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 800px;
+    height: 360px;
+}
+
+.imagesContainer
+{
+    width: 640px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5), -3px -3px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+}
+
+#slidesList
+{
+   width: 9999px;
+   height: 360px;
+   position: relative;
+   transition: left 450ms;
+   font-size: 0;
+}
+
+#slidesList li
+{
+    position: relative;
+    display: inline-block;
+}
+
+.slide
+{
+    position: relative;
+    display: block;
+    width: 640px;
+    height: 360px;
+    margin: 0;
+    padding: 0;
+}
+
+#buttonPrevious, #buttonNext {
+
+    width: 40px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+
+    cursor: pointer;
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+
+    
+    border-radius: 0 3px 3px 0;
+}
+
+#buttonNext {
+   
+    border-radius: 3px 0 0 3px;
+}
+
+#buttonPrevious:hover,
+#buttonNext:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/*---------------------------------------------------------------------------*/
+.numbers
+{
+    width: 100%;
+    min-width: 720px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 80%;
+    background-color: rgba(16, 201, 195, 0.8);
+}
+
+.numbers .item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 310px;
+    padding: 15px;
+}
+
+.numbers span
+{
+    margin-left: 25px;
+    color: white;
+}
+/*---------------------------------------------------------------------------*/
+.work
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    background-color: rgba(255, 255, 255, .8);
+    padding: 15px;
+}
+
+.work .item
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    
+    width: 390px;
+    height: 190px;
+
+    margin: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5), -3px -3px 10px rgba(0,0,0,0.5);
+    animation: flash 0.5s ease-in-out;
+}
+
+.work .item:nth-child(odd)
+{
+    background-color: rgba(0,0,0,.6);
+}
+
+#loadMore
+{
+    width: 100%;
+    height: 110px;
+
+    text-align: center;
+    line-height: 110px;
+    background-color: rgba(0,0,0,.4);
+}
+#loadMore:hover
+{
+    cursor: pointer;
+}
+/*---------------------------------------------------------------------------*/
+.wProcess
+{
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgba(255, 255, 255, .4);
+
+    text-align: center;
+}
+.wProcess h2, .wProcess span
+{
+    margin-bottom: auto;
+}
+/*---------------------------------------------------------------------------*/
+.services
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px;
+    background-color: rgba(16, 201, 195, 0.8);
+}
+
+.services .item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+    box-sizing: border-box;
+}
+/*---------------------------------------------------------------------------*/
+.reviews
+{
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.sliderContainer2
+{
+    margin: auto;
+    border: solid 1px black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 800px;
+    height: 360px;
+}
+/*---------------------------------------------------------------------------*/
+@font-face {
+    font-family: MontserratMedium;
+    src: url("../fonts/Montserrat Medium.otf"); 
+}
+
+@font-face {
+    font-family: NunitoSans-Regular;
+    src: url("../fonts/NunitoSans-Regular.ttf"); 
+}
+
+@keyframes flash {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+
+@media (max-width:1920px) {
+    .work
+    {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+@media (max-width:1800px) {
+    .work
+    {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width:1400px) {
+    .work
+    {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+@media (max-width:940px) {
+    .work
+    {
+        display: block;
+    }
+}
