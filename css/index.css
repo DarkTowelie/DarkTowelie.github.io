@@ -312,27 +312,6 @@
     box-sizing: border-box;
 }
 /*---------------------------------------------------------------------------*/
-.reviews
-{
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: rgba(255, 255, 255, .4);
-}
-
-.sliderContainer2
-{
-    margin: auto;
-    border: solid 1px black;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 800px;
-    height: 360px;
-}
-/*---------------------------------------------------------------------------*/
 @font-face {
     font-family: MontserratMedium;
     src: url("../fonts/Montserrat Medium.otf"); 
