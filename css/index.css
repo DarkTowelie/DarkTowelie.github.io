@@ -7,11 +7,16 @@
 
 .banner .devAndDev
 {
+    margin-top: 30px;
+    margin-right: 30px;
     float: right;
     width: 500px;
     padding: 40px;
     text-align: justify;
     padding-bottom: 10px;
+    border-radius: 10px;
+    border: solid 1px grey;
+    background-color: rgba(255,255,255,.3);
 }
 
 .banner .devAndDev
@@ -33,9 +38,10 @@
     width: 150px;
     height: 50px;
     margin-top: 10px;
-    background-color: aqua;
-    
-    color: white;
+    background-color: grey;
+    border-radius: 10px;
+
+    color: black;
     font-size: 15px;
     
     font-family: MontserratMedium;
@@ -44,23 +50,35 @@
 .contactUs:hover
 {
     cursor: pointer;
+    transition: all ease 2s;
+    color: white;
+    background-color: black;
 }
 /*---------------------------------------------------------------------------*/
 .aboutUs
 {
     width: 100%;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
+    background-image: url("../image/paper.jpg");
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2), -3px -3px 10px rgba(0,0,0,0.2);
+    background-size: cover;
     box-sizing: border-box;
+}
+
+.aboutUs h2
+{
+    font-family: LucidaHandwriting;
 }
 
 .aboutUs .text
 {
     padding: 100px;
-    width: 35%;
+    width: 65%;
     opacity: 80%;
     margin: auto;
     text-align: center;
-    font-family: NunitoSans-Regular;
+    font-family: LucidaHandwriting;
+    font-size: 20px;
 }
 
 .aboutUs h2
@@ -83,23 +101,30 @@
     width: 100%;
     padding-bottom: 70px;
     padding-top: 70px;
-    float: left;
+
 }
 
 .proSkills .bars
 {
-    width: 500px;
     height: 350px;
+
+    border-radius: 10px;
+    border: solid 1px grey;
+    background-color: rgba(255,255,255,.3);
+    
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .proSkills .bars h2
 {
-    
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .proSkills .bars span
 {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 /*--ProgressBar--*/
 .pb
@@ -236,7 +261,7 @@
 {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-
+    justify-items: center;
     background-color: rgba(255, 255, 255, .8);
     padding: 15px;
 }
@@ -274,6 +299,8 @@
 #loadMore:hover
 {
     cursor: pointer;
+    transition: ease 2s;
+    color: white;
 }
 /*---------------------------------------------------------------------------*/
 .wProcess
@@ -322,6 +349,11 @@
     src: url("../fonts/NunitoSans-Regular.ttf"); 
 }
 
+@font-face {
+    font-family: LucidaHandwriting;
+    src: url("../fonts/Lucida Handwriting.ttf"); 
+}
+
 @keyframes flash {
  from { opacity: 0; }
  to { opacity: 1; }
@@ -349,6 +381,12 @@
         display: grid;
         grid-template-columns: 50% 50%;
     }
+
+    .proSkills .bars
+    {
+        margin-bottom: 50px;
+    }
+}
 
 @media (max-width:940px) {
     .work
