@@ -8,6 +8,7 @@ function nextSlide()
 		moveSlide();
 	}
 }
+
 function previousSlide()
 {
 	if (sliderImageIndex >= 1)

@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-h2
+h2gh
 {
     font-size: 40px;
     font-family: MontserratMedium;
@@ -28,14 +28,14 @@ span
 
     width: 100%;
     margin: auto;
-    min-width: 720px;
+    min-width: 1024px;
 }
 
 .wrap
 {
     width: 90%;
     margin: auto;
-    min-width: 720px;
+    min-width: 1024px;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.7), -3px -3px 10px rgba(0,0,0,0.7);
     background-color: rgba(200, 200, 200, 0.7);
 }
