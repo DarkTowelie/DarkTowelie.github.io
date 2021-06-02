@@ -19,7 +19,7 @@ function createCUFrom()
 	blackBox.style.opacity = "0";
 	blackBox.style.transition = "opacity ease 1s";
 
-	let whiteBox = document.createElement('div');
+	let whiteBox = document.createElement('form');
 	whiteBox.innerHTML = "Contact us";
 	whiteBox.style.boxShadow = "3px 3px 10px rgba(0,0,0,0.7), -3px -3px 10px rgba(0,0,0,0.7)";
 	whiteBox.style.fontSize = "40px";
@@ -42,11 +42,13 @@ function createCUFrom()
 		name.setAttribute("placeholder", "Name");
 		name.className = "inputCU";
 		whiteBox.append(name);
+
 	let sName = document.createElement("input");
 		sName.setAttribute("type", "text");
 		sName.setAttribute("placeholder", "Surname");
 		sName.className = "inputCU";
 		whiteBox.append(sName);
+
 	let email = document.createElement("input");
 		email.setAttribute("type", "text");
 		email.setAttribute("placeholder", "Email");
@@ -75,6 +77,61 @@ function createCUFrom()
 	body[0].append(blackBox);
 	body[0].append(whiteBox);
 	setTimeout(setOpacity, 1, blackBox, whiteBox);
+	
+	whiteBox.addEventListener("submit", formSender);
+	
+	async function formSender(e)
+	{
+		e.preventDefault();
+		formValidate();
+	}
+
+	function formValidate()
+	{
+		let error = 0;
+		formRemoveError(email);
+		formRemoveError(name);
+		formRemoveError(sName);
+
+		if(emailTest())
+		{
+			formAddError(email);
+			error++;
+		}
+
+		if(name.value === '')
+		{
+			formAddError(name);
+			error++;
+		}
+
+		if(sName.value === '')
+		{
+			formAddError(sName);
+			error++;
+		}
+
+		if(error === 0)
+		{
+			alert('Thank you for message!!!')
+			blackBox.remove();
+			whiteBox.remove();
+		}
+	}
+
+	function formAddError(input)
+	{
+		input.classList.add('_error');
+	}
+
+	function formRemoveError(input)
+	{
+		input.classList.remove('_error');
+	}
+
+	function emailTest()
+	{
+		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(email.value);
+	}
 }
 contactUs[0].addEventListener ("click", createCUFrom);
-
