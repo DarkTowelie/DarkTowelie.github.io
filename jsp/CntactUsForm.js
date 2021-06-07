@@ -83,7 +83,7 @@ function createCUFrom()
 	async function formSender(e)
 	{
 		e.preventDefault();
-		formValidate();
+		let error = formValidate();
 	}
 
 	function formValidate()
@@ -99,13 +99,13 @@ function createCUFrom()
 			error++;
 		}
 
-		if(name.value === '')
+		if(nameTest())
 		{
 			formAddError(name);
 			error++;
 		}
 
-		if(sName.value === '')
+		if(sNameTest())
 		{
 			formAddError(sName);
 			error++;
@@ -117,6 +117,8 @@ function createCUFrom()
 			blackBox.remove();
 			whiteBox.remove();
 		}
+
+		return error;
 	}
 
 	function formAddError(input)
@@ -131,7 +133,17 @@ function createCUFrom()
 
 	function emailTest()
 	{
-		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(email.value);
+		return !/^[A-Za-z@0-9.]+$/.test(email.value);
+	}
+
+	function nameTest()
+	{
+		return !/^[A-Za-z]+$/.test(name.value);
+	}
+
+	function sNameTest()
+	{
+		return !/^[A-Za-z]+$/.test(sName.value);
 	}
 }
 contactUs[0].addEventListener ("click", createCUFrom);

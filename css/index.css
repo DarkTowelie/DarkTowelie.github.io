@@ -84,7 +84,7 @@
 
 ._error
 {
-    box-shadow: 3px 3px 10px red, -3px -3px 10px red;
+    outline: solid 4px red;
 }
 /*---------------------------------------------------------------------------*/
 .aboutUs
